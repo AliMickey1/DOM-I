@@ -45,55 +45,37 @@ console.log('project wired!')
 
 // const siteContent 
 //All links
-const nav1Link = document.querySelector('header nav a')
-nav1Link.textContent = siteContent.nav["nav-item-1"]
-const nav2Link = document.querySelector('header nav a')
-nav2Link.textContent = siteContent.nav["nav-item-2"]
-const nav3Link = document.querySelector('header nav a')
-nav3Link.textContent = siteContent.nav["nav-item-3"]
-const nav4Link = document.querySelector('header nav a')
-nav4Link.textContent = siteContent.nav["nav-item-4"]
-const nav5Link = document.querySelector('header nav a')
-nav5Link.textContent = siteContent.nav["nav-item-5"]
-const nav6Link = document.querySelector('header nav a')
-nav6Link.textContent = siteContent.nav["nav-item-6"]
+const navLink = document.querySelectorAll('header nav a')
+const navLinkText = Object.values(siteContent.nav)
+navLink.forEach((link, idx) => {
+  link.textContent = navLinkText[idx]
+  link.classList.add('italic')
+})
 
-
-
-
-//adding words to links
-links.textContent = 'Services'
-
-// "nav-item-1": "Services",
-//     "nav-item-2": "Product",
-//     "nav-item-3": "Vision",
-//     "nav-item-4": "Features",
-//     "nav-item-5": "About",
-//     "nav-item-6": "Contact",
 //logo img
 const logoImg = document.querySelector('#logo-img')
 logoImg.src = siteContent.images['logo-img']
-//ctaimgs
+//cta
 const ctaImg = document.querySelector('#cta-img')
 ctaImg.src = siteContent.images['cta-img']
-//middle accent img
-const middleImg = document.querySelector('#middle-img')
-middleImg.src = siteContent.images['accent-img']
+
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
+
+const mainSection = document.querySelectorAll('.top-content')
+const toph4Tag = mainSection.querySelectorAll('h4')
+toph4Tag[0].textContent = siteContent['main-content']['features-h4']
+toph4Tag[1].textContent = siteContent['main-content']['features-content']
+toph4Tag[2].textContent = siteContent['main-content']['about-h4']
+toph4Tag[3].textContent = siteContent['main-content']['about-content']
 
 
-
-//header
-const header = document.querySelector('header')
-//header tags
-const h1tag = document.querySelectorAll('h1')
-const h2tag = document.querySelectorAll('h2')
-const h3tag = document.querySelectorAll('h3')
-const h4tag = document.querySelectorAll('h4')
-//div
-const divider = document.querySelectorAll('div')
 //contact
 const contact = document.querySelector('contact')
 
+//middle accent img
+const middleImg = document.querySelector('#middle-img')
+middleImg.src = siteContent.images['accent-img']
 
 
 //footer
