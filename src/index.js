@@ -40,3 +40,34 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+
+//Find elements on page
+
+//All links
+const links = document.querySelectorAll('nav a');
+//logo
+const logoImg = document.querySelector('#logo')
+//imgs
+const pix = document.querySelectorAll('img')
+//header
+const header = document.querySelector('header')
+//header tags
+const h1tag = document.querySelectorAll('h1')
+const h2tag = document.querySelectorAll('h2')
+const h3tag = document.querySelectorAll('h3')
+const h4tag = document.querySelectorAll('h4')
+//div
+const divider = document.querySelectorAll('div')
+//contact
+const contact = document.querySelector('contact')
+//footer
+const footer = document.querySelector('footer')
+
+//adding words to links
+links.textContent = 'Services'
+
+//logo Img
+logoImg.setAttribute('href', 'http://localhost:9000/img/logo.png')
+
+//footer
