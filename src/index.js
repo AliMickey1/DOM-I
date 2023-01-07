@@ -62,20 +62,39 @@ ctaImg.src = siteContent.images['cta-img']
 document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
 document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
 
-const mainSection = document.querySelectorAll('.top-content')
-const toph4Tag = mainSection.querySelectorAll('h4')
-toph4Tag[0].textContent = siteContent['main-content']['features-h4']
-toph4Tag[1].textContent = siteContent['main-content']['features-content']
-toph4Tag[2].textContent = siteContent['main-content']['about-h4']
-toph4Tag[3].textContent = siteContent['main-content']['about-content']
-
-
-//contact
-const contact = document.querySelector('contact')
+const topSection = document.querySelector('.top-content')
+topSection.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topSection.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topSection.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topSection.children[1].children[1].textContent = siteContent['main-content']['about-content']
 
 //middle accent img
 const middleImg = document.querySelector('#middle-img')
 middleImg.src = siteContent.images['accent-img']
+
+const bottomSection = document.querySelector('.bottom-content')
+// const botth4Tag = document.querySelectorAll('h4')
+bottomSection.children[0].children[0].textContent = siteContent['main-content']['services-h4']
+bottomSection.children[0].children[1].textContent = siteContent['main-content']['services-content']
+bottomSection.children[1].children[0].textContent = siteContent['main-content']['product-h4']
+bottomSection.children[1].children[1].textContent = siteContent['main-content']['product-content']
+bottomSection.children[2].children[0].textContent = siteContent['main-content']['vision-h4']
+bottomSection.children[2].children[1].textContent = siteContent['main-content']['vision-content']
+
+// const bottPTag = document.querySelectorAll('p')
+
+
+
+
+
+//contact
+const contactInfo = document.querySelector('section.contact')
+contactInfo.children[0].textContent = siteContent['contact']['contact-h4']
+contactInfo.children[1].textContent = siteContent['contact']['address']
+contactInfo.children[2].textContent = siteContent['contact']['phone']
+contactInfo.children[3].textContent = siteContent['contact']['email']
+
+
 
 
 //footer
