@@ -42,14 +42,46 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 console.log('project wired!')
 
 
-//Find elements on page
 
+// const siteContent 
 //All links
-const links = document.querySelectorAll('nav a');
-//logo
-const logoImg = document.querySelector('#logo')
-//imgs
-const pix = document.querySelectorAll('img')
+const nav1Link = document.querySelector('header nav a')
+nav1Link.textContent = siteContent.nav["nav-item-1"]
+const nav2Link = document.querySelector('header nav a')
+nav2Link.textContent = siteContent.nav["nav-item-2"]
+const nav3Link = document.querySelector('header nav a')
+nav3Link.textContent = siteContent.nav["nav-item-3"]
+const nav4Link = document.querySelector('header nav a')
+nav4Link.textContent = siteContent.nav["nav-item-4"]
+const nav5Link = document.querySelector('header nav a')
+nav5Link.textContent = siteContent.nav["nav-item-5"]
+const nav6Link = document.querySelector('header nav a')
+nav6Link.textContent = siteContent.nav["nav-item-6"]
+
+
+
+
+//adding words to links
+links.textContent = 'Services'
+
+// "nav-item-1": "Services",
+//     "nav-item-2": "Product",
+//     "nav-item-3": "Vision",
+//     "nav-item-4": "Features",
+//     "nav-item-5": "About",
+//     "nav-item-6": "Contact",
+//logo img
+const logoImg = document.querySelector('#logo-img')
+logoImg.src = siteContent.images['logo-img']
+//ctaimgs
+const ctaImg = document.querySelector('#cta-img')
+ctaImg.src = siteContent.images['cta-img']
+//middle accent img
+const middleImg = document.querySelector('#middle-img')
+middleImg.src = siteContent.images['accent-img']
+
+
+
 //header
 const header = document.querySelector('header')
 //header tags
@@ -61,13 +93,10 @@ const h4tag = document.querySelectorAll('h4')
 const divider = document.querySelectorAll('div')
 //contact
 const contact = document.querySelector('contact')
-//footer
-const footer = document.querySelector('footer')
 
-//adding words to links
-links.textContent = 'Services'
 
-//logo Img
-logoImg.setAttribute('href', 'http://localhost:9000/img/logo.png')
 
 //footer
+const foot = document.querySelector('footer a')
+foot.textContent = siteContent.footer.copyright
+foot.classList.add('bold')
